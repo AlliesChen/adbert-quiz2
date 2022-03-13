@@ -1,0 +1,51 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100vw;
+  height: fit-content;
+}
+
+.article-container > img {
+  width: 100%;
+  height: fit-content;
+}
+
+.background {
+  position: sticky;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 813px;
+  max-height: calc(813 / 16 * 10);
+  background: url(./img/background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media only screen and (max-width: 550px) {
+  .article-container > img {
+    width: 100vw;
+  }
+  .background {
+    width: 100vw;
+    height: 62.5vw;
+    max-width: 160vh;
+    max-height: 100vh;
+    background-size: cover;
+  }
+  .background > img {
+    height: 100%;
+  }
+}
